@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 from inference_sdk import InferenceHTTPClient
 import tempfile
 import os
+
 # Define the inference client
 CLIENT = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",
@@ -72,7 +73,10 @@ if uploaded_file is not None:
                 draw.rectangle([x1, y1, x2, y2], outline="red", width=2)
                 # Calculate text size and position
                 font_size = int(height * 0.1)  # Set font size to 10% of the bounding box height
-                font = ImageFont.truetype("arial.ttf", size=font_size)
+                try:
+                    font = ImageFont.truetype("arial.ttf", size=font_size)
+                except OSError:
+                    font = ImageFont.load_default()
                 text = f"DISEASE: {class_label.upper()}"
                 text_bbox = draw.textbbox((0, 0), text, font=font)
                 text_size = (text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1])
