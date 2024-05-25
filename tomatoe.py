@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 from inference_sdk import InferenceHTTPClient
 import tempfile
-
+import os
 # Define the inference client
 CLIENT = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",
