@@ -18,7 +18,8 @@ disease_advice = {
     "Septoria": "Use disease-free seeds and rotate crops.",
     "Leaf Mold": "Ensure good air circulation and use fungicides.",
     "Bacterial Spot": "Use copper-based sprays and remove infected plants.",
-    "Early Blight": "Apply fungicides and remove infected leaves."
+    "Early Blight": "Apply fungicides and remove infected leaves.",
+    "Leaf Miner": "Use insecticides and remove affected leaves."
     # Add more diseases and advice as needed
 }
 
