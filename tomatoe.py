@@ -170,7 +170,7 @@ if uploaded_file is not None:
         # Display bounding box results with larger text and background color
         st.markdown(
             '<div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">'
-            '<h2 style="color: black;">🔍 Desease Detection Results</h2>',
+            '<h2 style="color: black;">🔍 Disease Detection Results</h2>',
             unsafe_allow_html=True
         )
         for idx, prediction in enumerate(result["predictions"]):
