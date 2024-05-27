@@ -14,14 +14,85 @@ MODEL_ID = "tomato-leaf-disease-rxcft/3"
 
 # Dictionary mapping diseases to advice messages
 disease_advice = {
-    "Late Blight": "Remove affected leaves and apply fungicides.",
-    "Septoria": "Use disease-free seeds and rotate crops.",
-    "Leaf Mold": "Ensure good air circulation and use fungicides.",
-    "Bacterial Spot": "Use copper-based sprays and remove infected plants.",
-    "Early Blight": "Apply fungicides and remove infected leaves.",
-    "LEAF_MINER": "Use insecticides and remove affected leaves."
-    # Add more diseases and advice as needed
+    "Bacterial Spot": (
+        "1. Remove and destroy infected plant debris to prevent the spread of the bacteria.\n"
+        "2. Apply copper-based sprays every 7-10 days to help control the disease.\n"
+        "3. Avoid overhead watering to reduce leaf wetness and the potential for bacterial spread.\n"
+        "4. Practice crop rotation to reduce the presence of the bacteria in the soil.\n"
+        "5. Use disease-free seeds and resistant plant varieties if available."
+    ),
+    "Early Blight": (
+        "1. Apply fungicides such as chlorothalonil or copper-based products at the first sign of disease and continue at regular intervals.\n"
+        "2. Remove and destroy infected leaves to reduce the spread of the fungus.\n"
+        "3. Mulch around the base of plants to reduce soil splash onto leaves, which can spread the pathogen.\n"
+        "4. Practice crop rotation and avoid planting tomatoes or potatoes in the same location each year.\n"
+        "5. Ensure good air circulation by spacing plants properly and pruning excess foliage."
+    ),
+    "Healthy": (
+        "1. Continue regular monitoring of plants for any signs of disease or pest infestation.\n"
+        "2. Maintain good garden hygiene by removing dead leaves and debris regularly.\n"
+        "3. Provide plants with adequate water and nutrients to ensure optimal growth.\n"
+        "4. Use organic mulches to help retain soil moisture and reduce weed competition.\n"
+        "5. Rotate crops annually to prevent the buildup of soil-borne diseases."
+    ),
+    "Iron Deficiency": (
+        "1. Apply iron chelates to the soil or as a foliar spray to correct iron deficiency.\n"
+        "2. Adjust soil pH to between 6.0 and 6.5, as iron is more available to plants in slightly acidic soils.\n"
+        "3. Avoid overwatering, as waterlogged soils can inhibit iron uptake.\n"
+        "4. Ensure proper fertilization, avoiding excessive phosphorus, which can interfere with iron absorption.\n"
+        "5. Plant iron-efficient varieties if available, especially in areas prone to iron deficiency."
+    ),
+    "Late Blight": (
+        "1. Remove and destroy all affected leaves and plants to prevent the spread of the pathogen.\n"
+        "2. Apply fungicides such as chlorothalonil, copper-based products, or specific late blight fungicides regularly, especially in wet conditions.\n"
+        "3. Avoid overhead watering to reduce leaf wetness.\n"
+        "4. Space plants properly to ensure good air circulation and reduce humidity around the plants.\n"
+        "5. Practice crop rotation and avoid planting tomatoes and potatoes in the same area each year."
+    ),
+    "Leaf Mold": (
+        "1. Ensure good air circulation by properly spacing plants and pruning excess foliage.\n"
+        "2. Apply fungicides such as copper-based products or other fungicides labeled for leaf mold.\n"
+        "3. Water plants at the base to avoid wetting the foliage.\n"
+        "4. Remove and destroy infected leaves to reduce the source of inoculum.\n"
+        "5. Grow resistant varieties if available."
+    ),
+    "Leaf_Miner": (
+        "1. Use insecticides such as spinosad or neem oil to control leaf miner populations.\n"
+        "2. Remove and destroy affected leaves to reduce the number of larvae developing into adults.\n"
+        "3. Use yellow sticky traps to monitor and control adult leaf miners.\n"
+        "4. Encourage natural predators, such as parasitic wasps, which can help control leaf miner populations.\n"
+        "5. Practice crop rotation to disrupt the life cycle of the pests."
+    ),
+    "Mosaic Virus": (
+        "1. Remove and destroy infected plants to prevent the spread of the virus.\n"
+        "2. Control aphids and other insect vectors that can transmit the virus using insecticidal soaps or oils.\n"
+        "3. Avoid working with wet plants to reduce the risk of spreading the virus through contact.\n"
+        "4. Disinfect tools and hands after handling infected plants.\n"
+        "5. Use virus-free seeds and resistant varieties if available."
+    ),
+    "Septoria": (
+        "1. Use disease-free seeds and transplants to prevent introducing the pathogen.\n"
+        "2. Apply fungicides such as chlorothalonil or mancozeb at the first sign of disease and continue at regular intervals.\n"
+        "3. Remove and destroy infected leaves to reduce the spread of the fungus.\n"
+        "4. Practice crop rotation and avoid planting tomatoes in the same location each year.\n"
+        "5. Ensure good air circulation by spacing plants properly and pruning excess foliage."
+    ),
+    "Spider Mites": (
+        "1. Spray plants with water to dislodge spider mites and reduce their numbers.\n"
+        "2. Apply miticides or insecticidal soaps to control spider mite populations.\n"
+        "3. Introduce natural predators, such as ladybugs or predatory mites, to help manage spider mite infestations.\n"
+        "4. Maintain adequate humidity around plants, as spider mites thrive in dry conditions.\n"
+        "5. Regularly inspect plants for early signs of spider mite activity and take prompt action."
+    ),
+    "Yellow Leaf Curl Virus": (
+        "1. Remove and destroy infected plants to prevent the spread of the virus.\n"
+        "2. Control whiteflies, the primary vector of the virus, using insecticidal soaps, oils, or yellow sticky traps.\n"
+        "3. Avoid planting tomatoes near crops that are hosts for whiteflies.\n"
+        "4. Use virus-free transplants and resistant varieties if available.\n"
+        "5. Practice good garden hygiene by removing weeds and plant debris that can harbor whiteflies and the virus."
+    )
 }
+
 
 def infer_image(image):
     # Save the image to a temporary file
